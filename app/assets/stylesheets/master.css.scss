@@ -1,5 +1,6 @@
 body {
-  background-color: #404040;
+  background: url('/assets/halftone.png');
+  
 }
 .circle {
   font-weight:bold;
@@ -23,7 +24,8 @@ body {
 
 .navbar {
   border-radius: 0;
-  border: none;
+  border: #343434;
+  box-shadow: 0px 1px 3px #404040;
 }
 
 .navbar-default {
@@ -36,4 +38,35 @@ body {
 
 .navbar-default .navbar-nav > li > a:hover {
   color: #DC3D24;
+}
+
+.booyah-box {
+  color: white;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top:10px;
+  margin-bottom:15px;
+  padding:20px;
+  background-color: #404040;
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;  
+}
+
+.booyah-box h1 {
+  margin: 0px;
+  font-family: 'josefin_sansregular', sans-serif;
+  font-weight: bold;
+  color: #DC3D24;
+  font-size: 40px;
+}
+
+.booyah-box i {
+  font-family: 'playfair_displayregular',serif;
+  font-size: 16px;
+}
+
+.booyah-box p {
+  font-family: 'playfair_displayregular',serif;
+  font-size: 20px;
 }

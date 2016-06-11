@@ -1,8 +1,9 @@
-<h1>Gamers hound</h1>
 <% @places.each do |place| %>
-  <div>
+  <div class="booyah-box col-xs-10 col-xs-offset-1">
     <h1><%= place.name %></h1>
-    <i><%= place.address %></i>
-    <p><%= place.description %></p>
+    <br/><br/>
+    <i class="place-address"><%= place.address %></i>
+    <br/><br/>
+    <p class="place-description"><%= place.description %></p>    
   </div>
 <% end %>
