@@ -25,7 +25,7 @@ body {
 .navbar {
   border-radius: 0;
   border: #343434;
-  box-shadow: 0px 1px 3px #404040;
+  box-shadow: 0px 1px 3px #404040;  
 }
 
 .navbar-default {
@@ -34,6 +34,8 @@ body {
 
 .navbar-default .navbar-nav > li > a {
   color: white;
+  font-family: 'josefin_sansregular', sans-serif;
+  font-size: 18px;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -53,12 +55,20 @@ body {
   box-shadow: 1px 1px 2px 0 #d0d0d0;  
 }
 
-.booyah-box h1 {
+.booyah-box h1 a {
   margin: 0px;
   font-family: 'josefin_sansregular', sans-serif;
   font-weight: bold;
   color: #DC3D24;
   font-size: 40px;
+  text-shadow: 1px 1px #D97768;
+  text-decoration: none;
+}
+
+.booyah-box h1 a:hover {
+  color: white;
+  text-decoration: underline;
+  text-shadow: none;
 }
 
 .booyah-box i {
@@ -69,4 +79,45 @@ body {
 .booyah-box p {
   font-family: 'playfair_displayregular',serif;
   font-size: 20px;
+}
+
+.pagination {
+    background: #404040;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    padding: 1em;
+    cursor: default;
+    width: 100%;
+}
+
+.pagination .disabled {
+    color: black;
+}
+
+.pagination a, .pagination span {
+    padding: 0.2em 0.3em;
+}
+
+.pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: white;
+}
+
+.paginate_links {
+  padding: 0;
 }
