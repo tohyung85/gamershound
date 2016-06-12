@@ -4,4 +4,11 @@
   <i><%= @place.address %></i>
   <br/><br/>
   <p><%= @place.description %></p>
+
+  <% if user_signed_in? %>
+  <div class="pull-right">
+    <%= link_to 'Edit Place', edit_place_path, class: 'btn btn-warning' %>
+    <%= link_to 'Delete Place', edit_place_path, class: 'btn btn-danger' %>
+  </div>
+  <% end %>
 </div>
