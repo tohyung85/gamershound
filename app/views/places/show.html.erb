@@ -29,7 +29,7 @@
   
   <div id="map"></div>
   <br/>
-  
+
   <% if user_signed_in? && current_user == @place.user%>
   <div class="pull-right">
     <%= link_to 'Edit Place', edit_place_path(@place), class: 'btn btn-warning' %>
@@ -37,3 +37,23 @@
   </div>
   <% end %>
 </div>
+<br/>
+<h1>Comments</h1>
+<br/><br/>
+<% @place.comments.each do |comment| %>
+  <div>
+    <blockquote>
+      <b><%= comment.rating %></b>
+      <%= comment.message %>
+      <small><%= comment.user.email %></small>
+    </blockquote>
+  </div>
+<% end %>
+<br/>
+<%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
+    <%= f.input :message %>
+    <br/>
+    <%= f.input :rating %>
+    <br/>
+    <%= f.submit "Add a comment", class: 'btn btn-primary' %>
+  <% end %>
