@@ -38,6 +38,12 @@ gem 'simple_form'
 #Devise Gem, v3.2.4 and above will ensure no issues of older devise versions conflicting with heroku
 gem 'devise', '>= 3.2.4' 
 
+# Geocoder Gem
+gem 'geocoder', '1.3.4'
+
+# Figaro Gem
+gem 'figaro', '>= 1.0.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
