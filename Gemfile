@@ -44,6 +44,12 @@ gem 'geocoder', '1.3.4'
 # Figaro Gem
 gem 'figaro', '>= 1.0.0'
 
+# Carrierwave Gem
+gem 'carrierwave'
+
+# Fog gem communication of AWS with carrierwave
+gem 'fog'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
