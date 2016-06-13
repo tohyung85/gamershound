@@ -29,15 +29,23 @@
   
   <div id="map"></div>
   <br/>
+
+  <div class="photo-wrapper">
   <% if @place.photos.present? %>
     <% @place.photos.each do |photo| %>
-      <%= image_tag photo.picture, class: 'img-responsive' %>
-      <br/>
-      <%= photo.caption %>
+      <div class="col-xs-3 box">
+        <%= image_tag photo.picture, class: 'place-images img-responsive' %>
+        <span class="caption full-caption">
+          <%= photo.caption %>
+        </span>
+      </div>
     <% end %>
   <% end %>
+  </div>
 
+  <div class="clear"></div>
   <br/>
+
   <% if user_signed_in? && current_user == @place.user%>
   <div class="pull-right">
     <button type="button" class="btn btn-primary btn-primary" data-toggle="modal" data-target="#myModalPhoto">
