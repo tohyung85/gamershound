@@ -10,6 +10,18 @@
       <small><%= place.user.email %></small>
     <% end %>
 
+    <% if place.comments.present? %>
+      <div class="index-comment col-xs-12">
+        <blockquote>      
+          <%= place.comments.last.message %>
+          <% if place.comments.last.humanized_rating.present? %>
+            <b><%= place.comments.last.humanized_rating %></b>
+          <% end %>
+          <small><%= place.comments.last.user.email %></small>
+        </blockquote>
+      </div>
+    <% end %>
+
   </div>
 <% end %>
 
