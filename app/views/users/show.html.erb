@@ -1,0 +1,62 @@
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+  <div class="col-xs-4">
+  <%= image_tag 'user.png' %>
+  </div>
+  <div class="col-xs-8">
+    <h1><%= @user.email %></h1>
+    <h3>Member Since: <%= @user.created_at.strftime("%d %B ,%Y") %></h3>
+    <h4><%= @user.comments.count %> total comments</h4>
+    <h4><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</h4>
+  </div>
+
+</div>
+
+<div class="clear"></div>
+<br /><br />
+<h1 class="text-center">My Comments</h1>
+<br /><br />
+<% @user.comments.each do |comment| %>
+  <div class="col-xs-12 col-sm-6">
+    <h2 class="text-center user-links"><%= link_to comment.place.name, place_path(comment.place) %></h2>
+      <blockquote>      
+        <%= comment.message %>
+        <% if comment.humanized_rating.present? %>
+          <b><%= comment.humanized_rating %></b>
+        <% end %>
+        <small><%= comment.user.email %></small>
+      </blockquote>
+    </div>
+<% end %>
+
+<div class="clear"></div>
+<br /><br />
+
+<% @user.places.each do |place| %>
+  <div class="booyah-box col-xs-10 col-xs-offset-1">
+    <h1><%= link_to place.name, place_path(place) %></h1>
+    <br/><br/>
+    <% if place.photos.present? %>
+      <%= image_tag place.photos.last.picture, class: 'index-picture img-responsive' %>
+    <% end %>
+    <i class="place-address"><%= place.address %></i>
+    <br/><br/>
+    <p class="place-description"><%= place.description %></p>    
+
+    <% if place.user.present? %>
+      <small><%= place.user.email %></small>
+    <% end %>
+
+    <% if place.comments.present? %>
+      <div class="index-comment col-xs-12">
+        <blockquote>      
+          <%= place.comments.last.message %>
+          <% if place.comments.last.humanized_rating.present? %>
+            <b><%= place.comments.last.humanized_rating %></b>
+          <% end %>
+          <small><%= place.comments.last.user.email %></small>
+        </blockquote>
+      </div>
+    <% end %>
+  </div>
+
+<% end %>

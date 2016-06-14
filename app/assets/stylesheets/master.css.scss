@@ -45,6 +45,7 @@ body {
 }
 
 .booyah-box {
+  font-family: 'playfair_displayregular',serif;
   color: white;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
@@ -263,5 +264,16 @@ blockquote p {
   width: 100%;
   position: absolute;
   left: 0;
+}
 
+.user-links a {
+  font-family: 'josefin_sansregular', sans-serif;
+  font-weight: bold;
+  color: #DC3D24; 
+}
+
+.user-links a:hover {
+  color: #404040;
+  text-decoration: underline;
+  text-shadow: none;
 }
