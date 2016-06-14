@@ -27,6 +27,7 @@ body {
   border-radius: 0;
   border: #343434;
   box-shadow: 0px 1px 3px #404040;  
+  margin-bottom: 0;
 }
 
 .navbar-default {
@@ -242,4 +243,25 @@ blockquote p {
 .index-picture {
   height: 300px;
   width: auto;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    max-height: 550px;
+    width: 100%;
+}
+
+.carousel {
+  padding:0;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.carousel-caption {
+  font-family: 'playfair_displayregular',serif;
+  font-size: 24px;
+  text-shadow: rgba(0,0,0,0.95) 2px 2px;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  position: absolute;
+  left: 0;
+
 }
