@@ -3,7 +3,7 @@
   <% if @user.avatar.present? %>
     <%= image_tag @user.avatar, class: 'user-avatar' %>
   <% else %>
-    <%= image_tag 'user.png' %>
+    <%= image_tag 'user.png', class: 'user-avatar' %>
   <% end %>
   
   <br/><br/>
