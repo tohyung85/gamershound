@@ -2,6 +2,9 @@
   <div class="booyah-box col-xs-10 col-xs-offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1>
     <br/><br/>
+    <% if place.photos.present? %>
+      <%= image_tag place.photos.last.picture, class: 'index-picture img-responsive' %>
+    <% end %>
     <i class="place-address"><%= place.address %></i>
     <br/><br/>
     <p class="place-description"><%= place.description %></p>    
